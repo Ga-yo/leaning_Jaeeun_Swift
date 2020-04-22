@@ -1,2 +1,2 @@
-# leaning_Jaeeun-s_Swift
-꼼꼼한 재은씨의 스위프트를 보고 정리
+# leaning_Jaeeun_Swift
+꼼꼼한 재은씨의 스위프트 도서 참고 후 정리
