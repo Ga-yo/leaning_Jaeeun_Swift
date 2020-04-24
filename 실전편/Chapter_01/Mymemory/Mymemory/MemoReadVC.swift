@@ -19,6 +19,7 @@ class MemoReadVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.contents.numberOfLines = 0
         self.subject.text = param?.title
         self.contents.text = param?.contents
         self.img.image = param?.image

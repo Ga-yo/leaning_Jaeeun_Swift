@@ -24,6 +24,7 @@ class MemoFormmVC: UIViewController, UIImagePickerControllerDelegate, UINavigati
     
     //저장 버튼
     @IBAction func save(_ sender: Any){
+        print("\(String(describing: self.contents.text))")
         guard self.contents.text?.isEmpty == false else {
             let alert = UIAlertController(title: nil, message: "내용을 입력해주세요", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
