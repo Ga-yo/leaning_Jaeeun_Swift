@@ -66,7 +66,7 @@ class ListTableViewController: UITableViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        self.tableView.estimatedRowHeight = 50
+        
     }
     // MARK: - Table view data source
 
@@ -77,6 +77,7 @@ class ListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let row = self.list[indexPath.row]
         
         let cell: ListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as! ListTableViewCell
@@ -86,11 +87,15 @@ class ListTableViewController: UITableViewController {
         cell.opendate?.text = row.opendate
         cell.rating?.text = "\(row.rating!)"
         
-        cell.thumblenail.image = UIImage(named: row.thumbnail!)
+        cell.thumblenail.image = UIImage(named: row.thumbnail ?? "")
 
         return cell
     }
     
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
