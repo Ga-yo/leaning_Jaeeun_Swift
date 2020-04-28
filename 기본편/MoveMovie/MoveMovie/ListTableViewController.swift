@@ -10,6 +10,7 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
+    var page = 1
     lazy var list: [MovieVO] = {
         var datalist = [MovieVO]()
         
@@ -27,7 +28,7 @@ class ListTableViewController: UITableViewController {
         let apidata = try! Data(contentsOf: apiURL)
         
         //데이터 전송 결과를 로그로 출력(필수 x)
-        let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? ""
+        let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? "데이터가 없습니다"
         NSLog("API Result = \(log)")
         
         do{
@@ -50,9 +51,10 @@ class ListTableViewController: UITableViewController {
                 //movie 배열의 각 데이터를 mvo 상수의 속성에 대입
                 mvo.title = r["title"] as? String
                 mvo.description = r["genreNames"] as? String
-                mvo.thumbnail = r["thumnailImage"] as? String
+                mvo.thumbnail = r["thumbnailImage"] as? String
                 mvo.detail = r["linkUrl"] as? String
                 mvo.rating = ((r["ratingAverage"] as! NSString).doubleValue)
+               
                 
                 //배열에 추가
                 self.list.append(mvo)
@@ -68,6 +70,7 @@ class ListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         
     }
+    
     // MARK: - Table view data source
 
 
@@ -80,14 +83,19 @@ class ListTableViewController: UITableViewController {
         
         let row = self.list[indexPath.row]
         
-        let cell: ListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as! ListTableViewCell
+        let cell: ListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "movieCell") as! ListTableViewCell
         
         cell.title?.text = row.title
         cell.subtitle?.text = row.description
         cell.opendate?.text = row.opendate
         cell.rating?.text = "\(row.rating!)"
         
-        cell.thumblenail.image = UIImage(named: row.thumbnail ?? "")
+        
+        let url: URL! = URL(string: row.thumbnail ?? "")
+        
+        let imageData = try! Data(contentsOf: url)
+        
+        cell.thumblenail.image = UIImage(data: imageData)
 
         return cell
     }
