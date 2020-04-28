@@ -22,7 +22,7 @@
                                     <rect key="frame" x="187.5" y="0.0" width="39" height="44"/>
                                     <state key="normal" title="더보기"/>
                                     <connections>
-                                        <action selector="more:" destination="Foq-pn-Xdi" eventType="touchUpInside" id="HkQ-ii-NEw"/>
+                                        <action selector="more:" destination="Foq-pn-Xdi" eventType="touchUpInside" id="1ZK-E2-Lnv"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -110,6 +110,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="영화 제목" id="zyT-tI-2Uj"/>
+                    <connections>
+                        <outlet property="moreBtn" destination="lfT-R7-xys" id="mjf-H7-MZA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k47-qs-oFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

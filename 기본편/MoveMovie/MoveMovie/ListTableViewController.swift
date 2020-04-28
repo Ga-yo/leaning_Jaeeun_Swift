@@ -16,6 +16,7 @@ class ListTableViewController: UITableViewController {
         
         return datalist
     }()
+    @IBOutlet weak var moreBtn: UIButton!
     
     @IBAction func more(_ sender: Any){
             self.page += 1
@@ -31,6 +32,7 @@ class ListTableViewController: UITableViewController {
     }
 
     func cellMovieAPI(){
+        
         let url = "http://115.68.183.178:2029/hoppin/movies?order=releasedateasc&count=10&page=\(self.page)&version=1&genreId="
         let apiURL: URL! = URL(string: url)
         
@@ -68,9 +70,35 @@ class ListTableViewController: UITableViewController {
                 
                 //배열에 추가
                 self.list.append(mvo)
+                
+                //웹상에 있는 이미지를 읽어와 UIImage객체로 생성
+                let url: URL! = URL(string: mvo.thumbnail!)
+                let imageData = try! Data(contentsOf: url)
+                mvo.thumbnailImage = UIImage(data: imageData)
+                
+                //totalCount가 읽어온 데이터 크기와 같거나 클 경우 더보기 버튼을 숨긴다.
+                let totalCount = (hoppin["totalCount"] as? NSString)! .integerValue
+                if (self.list.count >= totalCount){
+                    self.moreBtn.isHidden = true
+                }
             }
         } catch{ }
     }
+    
+    func getThumbnailImage(_ index: Int) -> UIImage{
+        let mvo = self.list[index]
+        
+        if let savedImage = mvo.thumbnailImage{
+            return savedImage
+        }else{
+            let url: URL! = URL(string: mvo.thumbnail!)
+            let imageData = try! Data(contentsOf: url)
+            mvo.thumbnailImage = UIImage(data: imageData)
+            
+            return mvo.thumbnailImage!
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         
     }
@@ -86,6 +114,7 @@ class ListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let row = self.list[indexPath.row]
+        NSLog("호출된 행 : \(indexPath.row), 제목 : \(row.title)")
         
         let cell: ListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "movieCell") as! ListTableViewCell
         
@@ -94,13 +123,17 @@ class ListTableViewController: UITableViewController {
         cell.opendate?.text = row.opendate
         cell.rating?.text = "\(row.rating!)"
         
-        
-        let url: URL! = URL(string: row.thumbnail ?? "")
-        
-        let imageData = try! Data(contentsOf: url)
-        
-        cell.thumblenail.image = UIImage(data: imageData)
+//        let url: URL! = URL(string: row.thumbnail ?? "")
+//        let imageData = try! Data(contentsOf: url)
+//        cell.thumblenail.image = UIImage(data: imageData)
 
+        //이미지 객체 대입
+//        cell.thumblenail.image = row.thumbnailImage
+        
+        DispatchQueue.main.async {
+            cell.thumblenail.image = self.getThumbnailImage(indexPath.row)
+        }
+        
         return cell
     }
     
