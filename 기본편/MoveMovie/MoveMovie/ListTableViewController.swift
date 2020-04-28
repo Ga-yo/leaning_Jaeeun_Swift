@@ -17,11 +17,21 @@ class ListTableViewController: UITableViewController {
         return datalist
     }()
     
+    @IBAction func more(_ sender: Any){
+            self.page += 1
+            cellMovieAPI()
+            self.tableView.reloadData()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //URL 객체 생성
-        let url = "http://115.68.183.178:2029/hoppin/movies?order=releasedateasc&count=10&page=1&version=1&genreId="
+        cellMovieAPI()
+    }
+
+    func cellMovieAPI(){
+        let url = "http://115.68.183.178:2029/hoppin/movies?order=releasedateasc&count=10&page=\(self.page)&version=1&genreId="
         let apiURL: URL! = URL(string: url)
         
         //REST API 호출
@@ -60,13 +70,7 @@ class ListTableViewController: UITableViewController {
                 self.list.append(mvo)
             }
         } catch{ }
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
     override func viewWillAppear(_ animated: Bool) {
         
     }

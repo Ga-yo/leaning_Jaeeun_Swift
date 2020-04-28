@@ -17,7 +17,21 @@
                         <view key="tableFooterView" contentMode="scaleToFill" id="UpN-sG-S3V">
                             <rect key="frame" x="0.0" y="136" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfT-R7-xys">
+                                    <rect key="frame" x="187.5" y="0.0" width="39" height="44"/>
+                                    <state key="normal" title="더보기"/>
+                                    <connections>
+                                        <action selector="more:" destination="Foq-pn-Xdi" eventType="touchUpInside" id="HkQ-ii-NEw"/>
+                                    </connections>
+                                </button>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="lfT-R7-xys" firstAttribute="centerX" secondItem="UpN-sG-S3V" secondAttribute="centerX" id="heK-Y0-TZV"/>
+                                <constraint firstAttribute="bottom" secondItem="lfT-R7-xys" secondAttribute="bottom" id="obM-Hu-iEE"/>
+                                <constraint firstItem="lfT-R7-xys" firstAttribute="top" secondItem="UpN-sG-S3V" secondAttribute="top" id="s2E-Cd-32F"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="80" id="23V-MT-kNb" customClass="ListTableViewCell" customModule="MoveMovie" customModuleProvider="target">
@@ -28,9 +42,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영화제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKP-uA-blQ">
-                                            <rect key="frame" x="90" y="11" width="99" height="21"/>
+                                            <rect key="frame" x="90" y="11" width="153" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="99" id="MhL-TS-8RG"/>
+                                                <constraint firstAttribute="width" constant="153" id="MhL-TS-8RG"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -67,7 +81,7 @@
                                     <constraints>
                                         <constraint firstItem="1V2-Z1-45U" firstAttribute="trailing" secondItem="vj4-JW-Y1V" secondAttribute="trailingMargin" id="0Nv-g7-Ymm"/>
                                         <constraint firstItem="fKP-uA-blQ" firstAttribute="leading" secondItem="G5y-qK-p32" secondAttribute="leading" id="7Ox-S7-uZe"/>
-                                        <constraint firstItem="1V2-Z1-45U" firstAttribute="leading" secondItem="fKP-uA-blQ" secondAttribute="trailing" constant="94" id="FkA-cO-KAV"/>
+                                        <constraint firstItem="1V2-Z1-45U" firstAttribute="leading" secondItem="fKP-uA-blQ" secondAttribute="trailing" constant="40" id="FkA-cO-KAV"/>
                                         <constraint firstItem="1V2-Z1-45U" firstAttribute="trailing" secondItem="kzQ-kj-Wb9" secondAttribute="trailing" id="Ocj-dM-aVE"/>
                                         <constraint firstAttribute="bottom" secondItem="Ryg-pe-p2d" secondAttribute="bottom" id="UPh-Wu-enu"/>
                                         <constraint firstItem="Ryg-pe-p2d" firstAttribute="top" secondItem="vj4-JW-Y1V" secondAttribute="top" id="XD4-gu-DLb"/>
