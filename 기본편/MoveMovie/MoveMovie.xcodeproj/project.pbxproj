@@ -16,6 +16,8 @@
 		EBB51F742456CE9100C46265 /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB51F732456CE9100C46265 /* MovieVO.swift */; };
 		EBF13FD624598A96004B9180 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF13FD524598A96004B9180 /* WebViewController.swift */; };
 		EBF13FD924599146004B9180 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF13FD824599146004B9180 /* WebKit.framework */; };
+		EBF13FDB2459A037004B9180 /* TheaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF13FDA2459A037004B9180 /* TheaterCell.swift */; };
+		EBF13FDD2459A06D004B9180 /* TheaterListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF13FDC2459A06D004B9180 /* TheaterListController.swift */; };
 		EBF88C152456D3D200A0B6C9 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF88C142456D3D200A0B6C9 /* ListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		EBB51F732456CE9100C46265 /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
 		EBF13FD524598A96004B9180 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EBF13FD824599146004B9180 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		EBF13FDA2459A037004B9180 /* TheaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterCell.swift; sourceTree = "<group>"; };
+		EBF13FDC2459A06D004B9180 /* TheaterListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterListController.swift; sourceTree = "<group>"; };
 		EBF88C142456D3D200A0B6C9 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +73,8 @@
 				EBB51F712456CE6A00C46265 /* ListTableViewController.swift */,
 				EBF13FD524598A96004B9180 /* WebViewController.swift */,
 				EBB51F632456CE0600C46265 /* Main.storyboard */,
+				EBF13FDA2459A037004B9180 /* TheaterCell.swift */,
+				EBF13FDC2459A06D004B9180 /* TheaterListController.swift */,
 				EBB51F5D2456CE0600C46265 /* AppDelegate.swift */,
 				EBB51F5F2456CE0600C46265 /* SceneDelegate.swift */,
 				EBF88C142456D3D200A0B6C9 /* ListTableViewCell.swift */,
@@ -160,7 +166,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB51F722456CE6A00C46265 /* ListTableViewController.swift in Sources */,
+				EBF13FDB2459A037004B9180 /* TheaterCell.swift in Sources */,
 				EBF13FD624598A96004B9180 /* WebViewController.swift in Sources */,
+				EBF13FDD2459A06D004B9180 /* TheaterListController.swift in Sources */,
 				EBB51F742456CE9100C46265 /* MovieVO.swift in Sources */,
 				EBB51F5E2456CE0600C46265 /* AppDelegate.swift in Sources */,
 				EBB51F602456CE0600C46265 /* SceneDelegate.swift in Sources */,
