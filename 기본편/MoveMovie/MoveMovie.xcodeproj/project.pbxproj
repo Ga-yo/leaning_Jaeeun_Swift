@@ -14,6 +14,8 @@
 		EBB51F6A2456CE0900C46265 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB51F682456CE0900C46265 /* LaunchScreen.storyboard */; };
 		EBB51F722456CE6A00C46265 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB51F712456CE6A00C46265 /* ListTableViewController.swift */; };
 		EBB51F742456CE9100C46265 /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB51F732456CE9100C46265 /* MovieVO.swift */; };
+		EBF13FD624598A96004B9180 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF13FD524598A96004B9180 /* WebViewController.swift */; };
+		EBF13FD924599146004B9180 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF13FD824599146004B9180 /* WebKit.framework */; };
 		EBF88C152456D3D200A0B6C9 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF88C142456D3D200A0B6C9 /* ListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		EBB51F6B2456CE0900C46265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBB51F712456CE6A00C46265 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		EBB51F732456CE9100C46265 /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
+		EBF13FD524598A96004B9180 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		EBF13FD824599146004B9180 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		EBF88C142456D3D200A0B6C9 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBF13FD924599146004B9180 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,7 @@
 			children = (
 				EBB51F5C2456CE0600C46265 /* MoveMovie */,
 				EBB51F5B2456CE0600C46265 /* Products */,
+				EBF13FD724599146004B9180 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,9 +67,10 @@
 			isa = PBXGroup;
 			children = (
 				EBB51F712456CE6A00C46265 /* ListTableViewController.swift */,
+				EBF13FD524598A96004B9180 /* WebViewController.swift */,
+				EBB51F632456CE0600C46265 /* Main.storyboard */,
 				EBB51F5D2456CE0600C46265 /* AppDelegate.swift */,
 				EBB51F5F2456CE0600C46265 /* SceneDelegate.swift */,
-				EBB51F632456CE0600C46265 /* Main.storyboard */,
 				EBF88C142456D3D200A0B6C9 /* ListTableViewCell.swift */,
 				EBB51F732456CE9100C46265 /* MovieVO.swift */,
 				EBB51F662456CE0900C46265 /* Assets.xcassets */,
@@ -71,6 +78,14 @@
 				EBB51F6B2456CE0900C46265 /* Info.plist */,
 			);
 			path = MoveMovie;
+			sourceTree = "<group>";
+		};
+		EBF13FD724599146004B9180 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBF13FD824599146004B9180 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB51F722456CE6A00C46265 /* ListTableViewController.swift in Sources */,
+				EBF13FD624598A96004B9180 /* WebViewController.swift in Sources */,
 				EBB51F742456CE9100C46265 /* MovieVO.swift in Sources */,
 				EBB51F5E2456CE0600C46265 /* AppDelegate.swift in Sources */,
 				EBB51F602456CE0600C46265 /* SceneDelegate.swift in Sources */,

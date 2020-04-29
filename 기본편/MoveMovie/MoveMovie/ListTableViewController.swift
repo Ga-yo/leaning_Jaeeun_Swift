@@ -16,6 +16,9 @@ class ListTableViewController: UITableViewController {
         
         return datalist
     }()
+    
+    //MARK: IBOutle, IBAction
+    
     @IBOutlet weak var moreBtn: UIButton!
     
     @IBAction func more(_ sender: Any){
@@ -31,6 +34,7 @@ class ListTableViewController: UITableViewController {
         cellMovieAPI()
     }
 
+    // MARK: movie_func
     func cellMovieAPI(){
         
         let url = "http://115.68.183.178:2029/hoppin/movies?order=releasedateasc&count=10&page=\(self.page)&version=1&genreId="
@@ -97,10 +101,6 @@ class ListTableViewController: UITableViewController {
             
             return mvo.thumbnailImage!
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
     }
     
     // MARK: - Table view data source
@@ -196,4 +196,27 @@ class ListTableViewController: UITableViewController {
     }
     */
 
+}
+
+
+
+// MARK: Segue
+extension ListTableViewController{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //설정된 세그 아이덴티파이가 segue_detail이라면
+        if segue.identifier == "segue_detail"{
+            
+            let cell = sender as! ListTableViewCell
+            
+            //사용자가 클랙한 행을 나타낸다.
+            let path = self.tableView.indexPath(for: cell)
+            
+            //API 영화 데이터 배열 중에서 선택된 행에 대한 데이터를 추출
+            let movieinfo = self.list[path!.row]
+            
+            //행 정보를 통해 선택된 영화 데이터를 찾고 목적지 뷰 컨트롤러의 mvo 변수에 대입
+            let detailVC = segue.destination as? WebViewController
+            detailVC?.mvo = movieinfo
+        }
+    }
 }
