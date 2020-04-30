@@ -10,24 +10,25 @@ import UIKit
 
 class TheaterListController: UITableViewController {
 
+    //API를 통해 불러온 데이터를 저장할 배열변수
     var list = [NSDictionary]( )
+    //읽어온 데이터의 시작위치
     var startPoint = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //API를 호출
         self.callTheaterAPI()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    //API로부터 극장 정보를 읽어오는 메소드
     func callTheaterAPI(){
-        let requestURL = "http://115.68.183.178:2029/theater/list?s_page=0&s_list=100&type=json"
-        let slist = 100
-        let type = "json"
+        //URL을 구성하기 위한 상수값을 선언
+        let requestURL = "http://115.68.183.178:2029/theater/list"
+
+        let slist = 100 //데이터 개수
+        let type = "json" //데이터 형식
         
         let urlObj = URL(string: "\(requestURL)?s_page=\(self.startPoint)&s_list=\(slist)&type=\(type)")
         
@@ -54,26 +55,27 @@ class TheaterListController: UITableViewController {
         }
     }
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.list.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell: TheaterCell = tableView.dequeueReusableCell(withIdentifier: "TheaterCell", for: indexPath) as! TheaterCell
+        let obj = self.list[indexPath.row]
 
-        // Configure the cell...
-
+        cell.name.text = obj["상영관명"] as? String
+        cell.tel.text = obj["연락처"] as? String
+        cell.addr.text = obj["소재지도로명주소"] as? String
+        
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
 
     /*
     // Override to support conditional editing of the table view.
