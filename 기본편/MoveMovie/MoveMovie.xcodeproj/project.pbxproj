@@ -29,13 +29,13 @@
 		EBB51F662456CE0900C46265 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB51F692456CE0900C46265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBB51F6B2456CE0900C46265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBB51F712456CE6A00C46265 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
-		EBB51F732456CE9100C46265 /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
-		EBF13FD524598A96004B9180 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		EBB51F712456CE6A00C46265 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListTableViewController.swift; path = ../ListTableViewController.swift; sourceTree = "<group>"; };
+		EBB51F732456CE9100C46265 /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieVO.swift; path = ../MovieVO.swift; sourceTree = "<group>"; };
+		EBF13FD524598A96004B9180 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = ../WebViewController.swift; sourceTree = "<group>"; };
 		EBF13FD824599146004B9180 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		EBF13FDA2459A037004B9180 /* TheaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterCell.swift; sourceTree = "<group>"; };
-		EBF13FDC2459A06D004B9180 /* TheaterListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterListController.swift; sourceTree = "<group>"; };
-		EBF88C142456D3D200A0B6C9 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		EBF13FDA2459A037004B9180 /* TheaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TheaterCell.swift; path = ../TheaterCell.swift; sourceTree = "<group>"; };
+		EBF13FDC2459A06D004B9180 /* TheaterListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TheaterListController.swift; path = ../TheaterListController.swift; sourceTree = "<group>"; };
+		EBF88C142456D3D200A0B6C9 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListTableViewCell.swift; path = ../ListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +50,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB2DC5D2245C059100B221AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EBB51F732456CE9100C46265 /* MovieVO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB2DC5D3245C05A700B221AE /* tableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EBF13FDA2459A037004B9180 /* TheaterCell.swift */,
+				EBF88C142456D3D200A0B6C9 /* ListTableViewCell.swift */,
+			);
+			path = tableViewCell;
+			sourceTree = "<group>";
+		};
+		EB2DC5D4245C05D800B221AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EBB51F712456CE6A00C46265 /* ListTableViewController.swift */,
+				EBF13FD524598A96004B9180 /* WebViewController.swift */,
+				EBF13FDC2459A06D004B9180 /* TheaterListController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EBB51F512456CE0600C46265 = {
 			isa = PBXGroup;
 			children = (
@@ -70,16 +97,13 @@
 		EBB51F5C2456CE0600C46265 /* MoveMovie */ = {
 			isa = PBXGroup;
 			children = (
-				EBB51F712456CE6A00C46265 /* ListTableViewController.swift */,
-				EBF13FD524598A96004B9180 /* WebViewController.swift */,
-				EBB51F632456CE0600C46265 /* Main.storyboard */,
-				EBF13FDA2459A037004B9180 /* TheaterCell.swift */,
-				EBF13FDC2459A06D004B9180 /* TheaterListController.swift */,
-				EBB51F5D2456CE0600C46265 /* AppDelegate.swift */,
+				EB2DC5D4245C05D800B221AE /* View */,
+				EB2DC5D3245C05A700B221AE /* tableViewCell */,
+				EB2DC5D2245C059100B221AE /* Model */,
 				EBB51F5F2456CE0600C46265 /* SceneDelegate.swift */,
-				EBF88C142456D3D200A0B6C9 /* ListTableViewCell.swift */,
-				EBB51F732456CE9100C46265 /* MovieVO.swift */,
 				EBB51F662456CE0900C46265 /* Assets.xcassets */,
+				EBB51F632456CE0600C46265 /* Main.storyboard */,
+				EBB51F5D2456CE0600C46265 /* AppDelegate.swift */,
 				EBB51F682456CE0900C46265 /* LaunchScreen.storyboard */,
 				EBB51F6B2456CE0900C46265 /* Info.plist */,
 			);
