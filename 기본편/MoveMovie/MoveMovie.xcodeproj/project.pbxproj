@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EBB0E257245C3195005C9BAE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB0E256245C3195005C9BAE /* MapKit.framework */; };
+		EBB0E259245C3203005C9BAE /* TheaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0E258245C3203005C9BAE /* TheaterViewController.swift */; };
 		EBB51F5E2456CE0600C46265 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB51F5D2456CE0600C46265 /* AppDelegate.swift */; };
 		EBB51F602456CE0600C46265 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB51F5F2456CE0600C46265 /* SceneDelegate.swift */; };
 		EBB51F652456CE0600C46265 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB51F632456CE0600C46265 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EBB0E256245C3195005C9BAE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EBB0E258245C3203005C9BAE /* TheaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TheaterViewController.swift; path = ../TheaterViewController.swift; sourceTree = "<group>"; };
 		EBB51F5A2456CE0600C46265 /* MoveMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB51F5D2456CE0600C46265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB51F5F2456CE0600C46265 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB0E257245C3195005C9BAE /* MapKit.framework in Frameworks */,
 				EBF13FD924599146004B9180 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +78,7 @@
 				EBB51F712456CE6A00C46265 /* ListTableViewController.swift */,
 				EBF13FD524598A96004B9180 /* WebViewController.swift */,
 				EBF13FDC2459A06D004B9180 /* TheaterListController.swift */,
+				EBB0E258245C3203005C9BAE /* TheaterViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +119,7 @@
 		EBF13FD724599146004B9180 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBB0E256245C3195005C9BAE /* MapKit.framework */,
 				EBF13FD824599146004B9180 /* WebKit.framework */,
 			);
 			name = Frameworks;
@@ -195,6 +202,7 @@
 				EBF13FDD2459A06D004B9180 /* TheaterListController.swift in Sources */,
 				EBB51F742456CE9100C46265 /* MovieVO.swift in Sources */,
 				EBB51F5E2456CE0600C46265 /* AppDelegate.swift in Sources */,
+				EBB0E259245C3203005C9BAE /* TheaterViewController.swift in Sources */,
 				EBB51F602456CE0600C46265 /* SceneDelegate.swift in Sources */,
 				EBF88C152456D3D200A0B6C9 /* ListTableViewCell.swift in Sources */,
 			);

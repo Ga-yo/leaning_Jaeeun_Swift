@@ -53,7 +53,21 @@ class TheaterListController: UITableViewController {
             alert.addAction(UIAlertAction(title: "확인", style: .cancel))
             self.present(alert, animated: false)
         }
+        
+        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if (segue.identifier == "segue_map"){
+               
+               let path = self.tableView.indexPath(for: sender as! UITableViewCell)
+               
+               let data = self.list[path!.row]
+               
+               (segue.destination as? TheaterViewController)?.param = data
+           }
+       }
+   
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

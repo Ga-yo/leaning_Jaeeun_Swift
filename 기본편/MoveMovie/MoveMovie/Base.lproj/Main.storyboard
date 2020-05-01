@@ -168,6 +168,7 @@
                                     <outlet property="addr" destination="n3p-am-HyR" id="Ogj-NF-Cqi"/>
                                     <outlet property="name" destination="7iq-hT-DOc" id="d4g-3Q-oKv"/>
                                     <outlet property="tel" destination="z65-z9-AXS" id="LKA-Md-O1u"/>
+                                    <segue destination="BTt-Bl-nd8" kind="show" identifier="segue_map" id="1QL-Vk-f2l"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -181,6 +182,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xY-oQ-a5E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="935" y="822"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="6ys-6G-aLc">
+            <objects>
+                <viewController id="BTt-Bl-nd8" customClass="TheaterViewController" customModule="MoveMovie" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qu6-Co-0Wj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BCH-4F-wqY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BCH-4F-wqY" firstAttribute="top" secondItem="54t-oJ-Yf7" secondAttribute="top" id="NZ0-tb-Ing"/>
+                            <constraint firstItem="BCH-4F-wqY" firstAttribute="leading" secondItem="54t-oJ-Yf7" secondAttribute="leading" id="lO4-qg-0rH"/>
+                            <constraint firstItem="54t-oJ-Yf7" firstAttribute="trailing" secondItem="BCH-4F-wqY" secondAttribute="trailing" id="skK-Db-J9Y"/>
+                            <constraint firstItem="54t-oJ-Yf7" firstAttribute="bottom" secondItem="BCH-4F-wqY" secondAttribute="bottom" id="tMQ-TY-vuY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="54t-oJ-Yf7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="hSH-jn-F4K"/>
+                    <connections>
+                        <outlet property="mapView" destination="BCH-4F-wqY" id="DbE-Uw-JAu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DTe-kA-08e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="822"/>
         </scene>
         <!--자세히 보기-->
         <scene sceneID="l17-Q0-Rt1">
@@ -269,6 +300,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XAn-P3-Hph" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tGQ-Fj-LZF">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
