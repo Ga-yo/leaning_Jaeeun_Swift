@@ -25,3 +25,29 @@
 #### 결론
 
 : 우리가 인터페이스 빌더에서 유저 인터페이스를 구현하는 과정은 결국 XML 파일을 작성하는 것과 다를 바가 없다.
+
+<br>
+
+<br>
+
+### 커스텀 코드
+
+----
+
+스토리보드에서 UI를 짜는것이 아니라 코드에서 UI를 구축하는 것이다. 먼저 버튼을 예로 들어서 해보자. 코드로 버튼을 구현할 때 버튼 타입을 결정해주어야한다.
+
+- UIButton.ButtonType.custom -> 버튼의 기본 속성을 사용하지 않고 원하는 형태로 직접 구현할 때
+- UIButton.ButtonType.system -> 버튼의 기본타입
+- UIButton.ButtonType.detailDisclosure -> 추가 내용이 있음을 표현하기 위한 타입
+- UIButton.ButtonType.contactAdd -> 주소록 추가용 타입으로, 버튼의 타이틀 옆에 + 마크가 추가되어 나타납니다
+
+
+
+- UIControlState.normal 
+- UIControlState.highlighted
+- UIControlState.disabled
+- UIControlState.selected
+- UIControlState.focused
+- UIControlState.application
+- UIControlState.reserved
+
