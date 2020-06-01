@@ -13,6 +13,7 @@
 		EB68CECD2483B2BA001727B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB68CECB2483B2BA001727B0 /* Main.storyboard */; };
 		EB68CECF2483B2BD001727B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB68CECE2483B2BD001727B0 /* Assets.xcassets */; };
 		EB68CED22483B2BD001727B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB68CED02483B2BD001727B0 /* LaunchScreen.storyboard */; };
+		EBC3086A24850AAF0091442D /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3086924850AAF0091442D /* ReadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EB68CECE2483B2BD001727B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB68CED12483B2BD001727B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB68CED32483B2BD001727B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBC3086924850AAF0091442D /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				EB68CEC52483B2BA001727B0 /* AppDelegate.swift */,
 				EB68CEC72483B2BA001727B0 /* SceneDelegate.swift */,
 				EB68CEC92483B2BA001727B0 /* ViewController.swift */,
+				EBC3086924850AAF0091442D /* ReadViewController.swift */,
 				EB68CECB2483B2BA001727B0 /* Main.storyboard */,
 				EB68CECE2483B2BD001727B0 /* Assets.xcassets */,
 				EB68CED02483B2BD001727B0 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				EB68CECA2483B2BA001727B0 /* ViewController.swift in Sources */,
 				EB68CEC62483B2BA001727B0 /* AppDelegate.swift in Sources */,
+				EBC3086A24850AAF0091442D /* ReadViewController.swift in Sources */,
 				EB68CEC82483B2BA001727B0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
